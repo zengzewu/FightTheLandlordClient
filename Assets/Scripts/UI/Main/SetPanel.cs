@@ -44,8 +44,7 @@ public class SetPanel : UIBase
     /// <param name="arg0"></param>
     private void onValueChange(float arg0)
     {
-        //操作音量
-        //TODO
+        Dispatch(AreaCode.AUDIO,AudioEvent.SET_VOLUME,arg0);
     }
 
     /// <summary>
@@ -62,9 +61,14 @@ public class SetPanel : UIBase
     /// <param name="arg0"></param>
     private void ontogAudioClick(bool arg0)
     {
-
-        //操作声音
-        //TODO
+        if (arg0)
+        {
+            Dispatch(AreaCode.AUDIO,AudioEvent.PLAY_BACKGROUND,null);
+        }
+        else
+        {
+            Dispatch(AreaCode.AUDIO,AudioEvent.STOP_BACKGROUND,null);
+        }
     }
 
     public override void OnDestroy()

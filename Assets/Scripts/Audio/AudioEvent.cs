@@ -12,4 +12,13 @@ public class AudioEvent : MonoBehaviour {
     /// 播放背景音乐
     /// </summary>
     public const int PLAY_BACKGROUND = 1;
+    /// <summary>
+    /// 停止背景音乐
+    /// </summary>
+    public const  int STOP_BACKGROUND = 2;
+    /// <summary>
+    /// 设置音量
+    /// </summary>
+    public const int SET_VOLUME = 4;
+
 }
