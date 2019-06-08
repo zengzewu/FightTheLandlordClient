@@ -6,6 +6,7 @@ public class BgAudio : AudioBase {
 
     private void Awake()
     {
+        DontDestroyOnLoad(gameObject);
         Bind(AudioEvent.PLAY_BACKGROUND,AudioEvent.SET_VOLUME,AudioEvent.STOP_BACKGROUND);
     }
 

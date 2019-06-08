@@ -38,8 +38,23 @@ public class FightHandler : HandlerBase
             case FightCode.OVER:
                 GameOver(value as OverDto);
                 break;
+            //case FightCode.OVER_TIME:
+            //    OverTime((int) value);
+            //    break;
             default:
                 break;
+        }
+    }
+
+    /// <summary>
+    /// 出牌超时
+    /// </summary>
+    /// <param name="value"></param>
+    private void OverTime(int value)
+    {
+        if (value==Caches.UserDto.Id)
+        {
+            Dispatch(AreaCode.UI,UIEvent.SHOW_OR_HIDE_DEAL_BTN,false);
         }
     }
 
